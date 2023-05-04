@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RecetasComponent } from './recetas/recetas.component';
 import { ListarecetaComponent } from './listareceta/listareceta.component';
 import { PerfiluseradminComponent } from './perfiluseradmin/perfiluseradmin.component';
+import { AnadiradminComponent } from './anadiradmin/anadiradmin.component';
+import { EditaradminComponent } from './editaradmin/editaradmin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PerfiluseradminComponent } from './perfiluseradmin/perfiluseradmin.comp
     LoginComponent,
     RecetasComponent,
     ListarecetaComponent,
-    PerfiluseradminComponent
+    PerfiluseradminComponent,
+    AnadiradminComponent,
+    EditaradminComponent
   ],
   imports: [
     BrowserModule,
