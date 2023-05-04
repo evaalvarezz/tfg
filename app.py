@@ -27,7 +27,7 @@ def index():
     
     conn.commit()
 
-    return render_template('/src/index.html')
+    return render_template('angular\src\index.html')
 
 
 
