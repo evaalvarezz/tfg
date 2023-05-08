@@ -22,8 +22,8 @@ def index():
     conn=mysql.connect()
     cursor=conn.cursor()
     cursor.execute(sql)
-    empleados=cursor.fetchall()
-    print(empleados)
+    recetas=cursor.fetchall()
+    print(recetas)
     
     conn.commit()
 
