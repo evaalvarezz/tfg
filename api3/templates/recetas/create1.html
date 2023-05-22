@@ -1,0 +1,58 @@
+{% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div id="alr" class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    {{message}} 
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+<div id="log">
+<form method="post" action="/store1" class="form-small" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header">
+            Crear Usuario
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos</h5> 
+            <p class="card-text">
+                <div class="input-group">
+                    <label for="nombre" class="form-label">
+                        Nombre: </label>
+                        <input type="text" class="form-control" name="txtNombre" id="txtNombre">
+                     </div>
+                     <br>
+                     <div class="input-group">
+                        <label for="nombre" class="form-label">
+                            Apellido: </label>
+                            <input type="text" name="txtApellido" class="form-control" id="txtApellido">
+                         </div>
+                         <br>
+                         <div class="input-group">
+                            <label for="nombre" class="form-label">
+                                Correo: </label>
+                                <input type="text" class="form-control" name="txtCorreo" id="txtCorreo">
+                             </div>
+                             <br>
+                             <div class="input-group">
+                                <label for="nombre" class="form-label">
+                                    Contraseña: </label>
+                                    <input type="password"  class="form-control" name="txtContrasena" id="txtContrasena"> 
+                                 </div>
+                                 <br>
+                                 <div class="input-group">
+                                    <input type="submit" class="btn btn-secondary m-2 my-3 value="Agregar">
+                                     </div>
+                                     <br>
+
+      </p>
+    
+</div>
+</div>
+</form>
+</div>
+
+
+{% include 'footer.html' %}

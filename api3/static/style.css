@@ -1,0 +1,83 @@
+/* Estilo para las tarjetas */
+  .card {   
+    margin-right: 50px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .form-card { 
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-small {
+  max-width: 700px;
+  justify-content: center;
+  justify-content: center;
+  margin-top: 100px; 
+  align-items: center;
+  
+
+}
+#alr{
+  display: flex;
+  margin-top: 70px; 
+}
+#log{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+  /* Estilo para el título de la tarjeta */
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  /* yo */
+  #undividual{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; 
+  }
+  body {
+    background: linear-gradient(to right, #e1c495, #f89f5b);
+    
+  }
+  footer{
+    background-color: white;
+  }
+
+  #coment{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; 
+    margin-bottom: 100px;
+    
+  }
+  #comentaa{
+    overflow: auto;
+  }
+  #ancho{
+    width: 1000px;
+    height: 600px; 
+
+  }
+ 
+  
+  
+
+  
+  /* Estilo para el contenedor del álbum */
+  .photos {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  

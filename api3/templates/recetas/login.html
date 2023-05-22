@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+    {% with messages = get_flashed_messages() %}
+{% if messages %}
+<div id="alr" class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+</div> 
+{% endif %}
+{% endwith %}
+<div id="log">
+<form method="post" action="/login" enctype="multipart/form-data" class="form-small">
+    <div class="card">
+        <div class="card-header">
+            Regístrate
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Datos</h5>
+            <p class="card-text">
+                <div class="input-group">
+                <label for="correo" class="form-label">Correo:</label>
+                  <input name="correo" type="text" id="correo" class="form-control" placeholder="Correo"/>
+                 </div>
+                 <br>
+                 <div class="input-group">
+                 <label for="password" class="form-label">Contraseña:</label>
+                 <input name="password1" type="password" id="password1" class="form-control" placeholder="Contraseña"/>
+                 </div>
+                 <br>
+                 <div class="input-group">
+                    <input id="botonRegistro" type="submit" class="btn btn-secondary m-2 my-3">
+                 </div>
+            </p>
+        </div>
+    </div>
+</form>
+</div>
+    
+{% include 'footer.html' %}

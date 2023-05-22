@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+<div id="alr">
+  <table class="table table-light">
+    <thead class="thead-light">
+       <tr>
+            <th>#</th>
+            <th>id_receta</th>
+            <th>Correo</th>
+            <th>Comentario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for comentario in comentario %} 
+        <tr>
+            <td>{{comentario[0] }}</td>
+            <td>{{comentario[1] }}</td>
+            <td>{{comentario[2] }}</td>
+            <td>{{comentario[3] }}</td>
+
+<td>
+                <a href="/destroy2/{{comentario[0] }}"> Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+    
+
+
+{% include 'footer.html' %}

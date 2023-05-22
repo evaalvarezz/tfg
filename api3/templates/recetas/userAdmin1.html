@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<div id="alr">
+  <table class="table table-light">
+    <thead class="thead-light">
+       <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo electronico</th>
+            <th>contraseña</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for usuario in usuarios %} 
+        <tr>
+            <td>{{usuario[0] }}</td>
+            <td>{{usuario[1] }}</td>
+            <td>{{usuario[2] }}</td>
+            <td>{{usuario[3] }}</td>
+            <td>{{usuario[4] }}</td>
+
+            <td>
+                <a href="/destroy1/{{usuario[0] }}"> Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+    
+
+
+{% include 'footer.html' %}

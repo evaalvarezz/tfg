@@ -1,0 +1,63 @@
+{% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div id="alr" class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    {{message}}
+    {% endfor %} 
+</div>
+{% endif %}
+{% endwith %}
+<div id="log">
+<form method="post" action="/store" class="form-small" enctype="multipart/form-data">
+    <div class="card">
+        <div class="card-header">
+            Crear receta
+        </div>
+         <div class="card-body">
+            <h5 class="card-title">Datos</h5> 
+            <p class="card-text">
+              <div class="input-group">
+                    <label for="nombre" class="form-label">
+                        Nombre:
+                    </label>
+                        <input type="text" name="txtNombre" id="txtNombre"  class="form-control" placeholder="Nombre">
+                </div>
+                     <br>
+           <div class="input-group">
+           <label for="Ingredientes" class="form-label">
+                 Ingredientes: </label>
+                 <input type="text" name="txtIngredientes" class="form-control id="txtIngredientes" placeholder="Ingredientes">
+            </div>
+            <br>
+             <div class="input-group">
+                 <label for="pasos" class="form-label">
+                    Pasos:
+                 </label>
+                     <input type="text" name="txtPasos" class="form-control id="txtPasos" placeholder="Pasos">  
+             </div>
+             <br> 
+             <div class="input-group">
+                 <label for="foto" class="form-label">
+                     Foto:
+                 </label>
+                     <input type="file" name="txtFoto" id="txtFoto" placeholder="Foto">
+             </div>
+             <br>
+             <div class="input-group">
+                <label for="Favorito" class="form-label">
+                     Vegano:
+                </label>
+                    <input type="text" name="txtFavorito" class="form-control id="txtFavorito" placeholder="Favorito">
+             </div>
+              <br>
+              <div class="input-group">
+                 <input type="submit" class="btn btn-secondary m-2 my-3 value="Agregar">
+              </div>
+      </p> 
+</div>
+</div>
+</form>
+</div>
+{% include 'footer.html' %}

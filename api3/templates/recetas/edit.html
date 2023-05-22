@@ -1,0 +1,71 @@
+{% include 'header.html' %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<div id="alr" class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+</div>
+{% endif %}
+{% endwith %}
+
+<div id="log">
+            <form method="post" action="/update" class="form-small" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="card-header">
+                        Editar receta
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Datos</h5> 
+                        <p class="card-text">
+                            {% for receta in recetas %} 
+                            <div class="input-group">
+                                <label for="nombre" class="form-label">
+                                    Id: </label>
+                                <input type="text" value="{{receta[0]}}" class="form-control" name="txtId" id="txtId">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="nombre" class="form-label">
+                                    Nombre: </label>
+                                <input type="text" value="{{receta[1]}}" class="form-control" name="txtNombre" id="txtNombre">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="Ingredientes" class="form-label">
+                                    Ingredientes: </label>
+                                <input type="text" value="{{receta[2]}}" class="form-control" name="txtIngredientes" id="txtIngredientes">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="pasos" class="form-label">
+                                    Pasos: </label>
+                                <input type="text" value="{{receta[3]}}" class="form-control" name="txtPasos" id="txtPasos">
+                            </div>
+                            <br> 
+                            <div class="input-group">
+                                <label for="foto" class="form-label">
+                                    Foto: </label>
+                                <input type="file" name="txtFoto" id="txtFoto">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="Favorito" class="form-label">
+                                    Vegano: </label>
+                                <input type="text" class="form-control" value="{{receta[5]}}" name="txtFavorito" id="txtFavorito">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="submit" class="btn btn-secondary m-2 my-3 value="Agregar" value="Editar">
+                            </div>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+{% include 'footer.html' %}
+

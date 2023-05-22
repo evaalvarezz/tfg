@@ -1,0 +1,71 @@
+{% include 'header.html' %}
+
+    {% with messages = get_flashed_messages() %}
+{% if messages %}
+<div id="alr" class="alert alert-danger" role="alert">
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+</div> 
+{% endif %}
+{% endwith %}
+<div id="undividual">
+    <div  class="card mb-3" style="max-width: 900px;">
+        <div class="row g-0" >
+          <div class="col-md-4">
+            <img src="/imagenes/{{receta[4] }}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8" >
+            <div class="card-body">
+              <h5 class="card-title">{{receta[1] }}</h5>
+              <p class="card-text">Ingredientes:</p>
+              <p class="card-text">{{receta[2] }}</p>
+              <p class="card-text">Pasos:</p>
+              <p class="card-text">{{receta[3] }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <form method="post"  enctype="multipart/form-data" id="coment">
+        <div class="card" id="ancho">
+          <div class="card-header">
+              Añade un comentario
+          </div>
+          <div class="card-body" id="comentaa">
+              <h5 class="card-title">Datos</h5> 
+              <p class="card-text">
+          </p>
+          {% if 'user_id' in session %}
+      <div class="input-group">
+        <label for="nombre" class="form-label">
+            correo: </label>
+            <input type="text" class="form-control" name="nombre" id="nombre">
+         </div>
+         <br>
+         <div class="input-group">
+            <label for="nombre" class="form-label">
+                Comentario: </label>
+                <input type="text" class="form-control" name="contenido" id="contenido">
+             </div>
+             <div class="input-group">
+              <input type="submit" class="btn btn-secondary m-2 my-3 value="Agregar comentario">
+               </div>
+             </p>
+               {% for comentario in comentario %} 
+               <p style="margin-left: 100px;" >{{comentario[2] }} :</p>
+               <p style="margin-left: 200px;">{{comentario[3] }}</p>
+               </tr>
+               {% endfor %}
+               {% else %}
+               <p>Inicie sesion para ver comentarios</p>
+               {% endif %}
+               <br><br><br><br>
+              </div>
+               </div>
+               </div>
+               </form>
+               
+             
+    
+{% include 'footer.html' %}

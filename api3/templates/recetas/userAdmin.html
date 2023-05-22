@@ -1,0 +1,46 @@
+{% include 'header.html' %}
+  <table class="table table-light">
+    <thead class="thead-light">
+        <br>
+        <br>
+        <div style="margin-top: 60px;">
+        <a  href="{{url_for('create')}}" class="btn btn-secondary " tabindex="-1" role="button" aria-disabled="true">Crear receta</a>
+    </div>
+        <br>
+        <br>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Ingredientes</th>
+            <th>Pasos</th>
+            <th>Foto</th>
+            <th>Vegano</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for receta in recetas %} 
+        <tr>
+            <td>{{receta[0] }}</td>
+            <td>{{receta[1] }}</td>
+            <td>{{receta[2] }}</td>
+            <td>{{receta[3] }}</td>
+
+            <td>
+                <img class="img-thumbnail" width="100" src="imagenes/{{receta[4] }}" alt="">
+            </td>
+            <td>{{receta[5] }}</td>
+
+            <td><a href="/edit/{{receta[0] }}" class="btn btn-success "> Editar</a>
+                
+                <a href="/destroy/{{receta[0] }}" class="btn btn-danger"> Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+  </table>
+    
+
+
+{% include 'footer.html' %}
