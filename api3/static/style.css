@@ -9,6 +9,11 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  #gif{
+   display: flex;
+   justify-content: space-between;
+
+  }
   .form-card { 
     max-width: 700px;
     margin: 0 auto;
